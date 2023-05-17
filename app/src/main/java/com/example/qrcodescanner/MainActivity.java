@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         scanBtn.setOnClickListener(this);
 
     }
-
+    //Function to implement QR library
     @Override
     public void onClick(View v) {
         // we need to create the object
