@@ -1,3 +1,4 @@
+//This project is developed by Group: Tanishq Agarwal (211B326), Ayushi Dwivedi (211B365), Yashwardhan Tulsyan (211B360)
 package com.example.qrcodescan;
 
 import android.content.Intent;
