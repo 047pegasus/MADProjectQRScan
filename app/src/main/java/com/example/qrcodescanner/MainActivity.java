@@ -48,7 +48,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         intentIntegrator.setOrientationLocked(true);
         intentIntegrator.initiateScan()
     }
-
+    
+    //Function to display result of barcode or QR code scanned!!
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
