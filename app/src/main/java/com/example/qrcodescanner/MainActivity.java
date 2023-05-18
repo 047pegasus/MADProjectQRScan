@@ -1,6 +1,6 @@
 //This project is developed by Group: Tanishq Agarwal (211B326), Ayushi Dwivedi (211B365), Yashwardhan Tulsyan (211B360) for the MAD project of 2023.
 //Import all the major libraries for the code.
-package com.example.qrcodescan;
+package com.example.qrcodescanner;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.qrcodescan.R;
+import com.example.qrcodescanner.R;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         // referencing and initializing
-        // the button and textviews
+        // the button and textViews
         scanBtn = findViewById(R.id.scanBtn);
         messageText = findViewById(R.id.textContent);
         messageFormat = findViewById(R.id.textFormat);
@@ -46,7 +46,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         IntentIntegrator intentIntegrator = new IntentIntegrator(this);
         intentIntegrator.setPrompt("Scan a barcode or QR Code");
         intentIntegrator.setOrientationLocked(true);
-        intentIntegrator.initiateScan()
+        intentIntegrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE);
+        intentIntegrator.initiateScan();
     }
     
     //Function to display result of barcode or QR code scanned!!
